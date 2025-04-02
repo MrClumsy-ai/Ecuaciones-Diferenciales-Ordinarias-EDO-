@@ -2,15 +2,13 @@ package main
 
 import "fmt"
 
-func funcion(y float64, t float64) float64 {
-	return 5*y*t - 1
-}
-
-func funcionSuperior(yDerivada float64, y float64, t float64) float64 {
-	return yDerivada*t + y
-}
-
 func main() {
+	funcion := func(y float64, t float64) float64 {
+		return 5*y*t - 1
+	}
+	funcionSuperior := func(yDerivada float64, y float64, t float64) float64 {
+		return yDerivada*t + y
+	}
 	y := 2.0
 	h := .2
 	t := 0.0
